@@ -17,7 +17,7 @@ class Accounting extends AdminController {
 
         // Busca todas as contas de caixa e seus saldos
         $data['accounts'] = $this->db
-            ->select('name, type, balance')
+            ->select('name, type, initial_balance')
             ->from(db_prefix() . 'acc_cash_accounts')
             ->get()
             ->result();
